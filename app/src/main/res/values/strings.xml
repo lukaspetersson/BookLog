@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">BookLog</string>
+
+    <string name="empty_shelf_heading">Your bookshelf is empty</string>
+    <string name="empty_shelf_subheading">Add a book to it!</string>
+
+    <string name="empty_search_heading">Couldn\'t find the book</string>
+    <string name="empty_search_subheading">Try another keyword!</string>
+    <string name="no_connection_heading">No internet connection.</string>
+    <string name="no_connection_subheading">Connect and try again!</string>
+
+    <string name="search_for_book">Search for book</string>
+    <string name="enter_keyword">Enter keyword</string>
+    <string name="add_book">Add a book</string>
+    <string name="edit_book">Edit book</string>
+
+    <string name="title">Title</string>
+    <string name="author">Author</string>
+    <string name="status">Status</string>
+    <string name="date">Reading period</string>
+    <string name="rating">Rating</string>
+    <string name="notes">Add notes</string>
+
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_edit">Edit</string>
+
+
+    <string name="to_read_status">To read</string>
+    <string name="reading_status">Reading</string>
+    <string name="finished_status">Finished</string>
+    <string name="show_all">Show all</string>
+
+    <string name="unknown_author">Unknown author</string>
+    <string name="unknown_date">Unknown period</string>
+
+    <string name="insert_book_failed">Error with saving book</string>
+    <string name="insert_book_successful">Book saved</string>
+    <string name="update_book_failed">Error with updating Book</string>
+    <string name="update_book_successful">Book updated</string>
+    <string name="delete_book_failed">Error with deleting book</string>
+    <string name="delete_book_successful">Book deleted</string>
+    <string name="no_title_error">Book needs a title</string>
+
+    <string name="delete_dialog_msg">Delete this book?</string>
+
+    <string name="settings_menu_item">Settings</string>
+    <string name="settings_title">Book settings</string>
+    <string name="settings_edit">Edit</string>
+
+    <string name="settings_show_status_label">Show status</string>
+    <string name="settings_show_status_key" translatable="false">show_status</string>
+    <string name="settings_show_status_default" translatable="false">@string/show_all_value</string>
+
+    <string name="settings_order_by_label">Order by</string>
+    <string name="settings_order_by_key" translatable="false">order_by</string>
+    <string name="settings_order_by_default" translatable="false">@string/settings_order_addition_date_value</string>
+
+    <string name="settings_order_by_rating_label">Rating</string>
+    <string name="settings_order_by_rating_value" translatable="false">rating</string>
+
+    <string name="settings_order_by_author_label">Author</string>
+    <string name="settings_order_by_author_value" translatable="false">author</string>
+
+    <string name="settings_order_by_status_label">Status</string>
+    <string name="settings_order_by_status_value" translatable="false">status</string>
+
+    <string name="settings_order_by_title_label">Title</string>
+    <string name="settings_order_by_title_value" translatable="false">title</string>
+
+    <string name="settings_order_addition_date_label">Addition date</string>
+    <string name="settings_order_addition_date_value" translatable="false">_id</string>
+
+    <string name="to_read_value" translatable="false">0</string>
+    <string name="reading_value" translatable="false">1</string>
+    <string name="finished_value" translatable="false">2</string>
+    <string name="show_all_value" translatable="false">show all</string>
+
+    <string name="by">" by "</string>
+    <string name="next_book">" is the book I will be reading next!"</string>
+    <string name="currently_reading">"I am currently reading "</string>
+    <string name="would_give_rating">"I would give it a "</string>
+    <string name="rating_so_far">/5 rating so far.</string>
+    <string name="my_notes">These are my notes:</string>
+    <string name="i_read">"I read "</string>
+    <string name="during">" during "</string>
+    <string name="have_read">"I have read "</string>
+    <string name="giving_rating">"I am giving it a "</string>
+    <string name="final_rating">/5 rating.</string>
+
+
+
+</resources>

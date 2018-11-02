@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="small_dim">6dp</dimen>
+    <dimen name="big_dim">12dp</dimen>
+    <dimen name="corner_radius">0dp</dimen>
+    <dimen name="design_fab_size_normal">56dp</dimen>
+    <dimen name="design_fab_size_mini">44dp</dimen>
+    <dimen name="shadow_margin_arrow">8dp</dimen>
+    <dimen name="shadow_margin_edit">12dp</dimen>
+</resources>

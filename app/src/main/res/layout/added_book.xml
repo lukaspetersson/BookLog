@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPaper"
+    app:cardCornerRadius="@dimen/corner_radius"
+    app:cardElevation="@dimen/small_dim"
+    app:cardUseCompatPadding="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:paddingRight="@dimen/small_dim">
+
+        <ImageView
+            android:id="@+id/added_thumbnail"
+            android:layout_width="89dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/added_title"
+            style="@style/Base.TextAppearance.AppCompat.Headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_dim"
+            android:layout_marginTop="@dimen/small_dim"
+            android:maxLines="1"
+            android:text="Winds of Winter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/added_thumbnail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/added_author"
+            style="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_dim"
+            android:lines="1"
+            android:text="Gorge R.R. Martin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/added_thumbnail"
+            app:layout_constraintTop_toBottomOf="@id/added_title" />
+
+        <TextView
+            android:id="@+id/added_status"
+            style="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/small_dim"
+            android:layout_marginTop="@dimen/small_dim"
+            android:layout_marginBottom="@dimen/small_dim"
+            android:gravity="center_vertical"
+            android:text="Status"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/rating_display"
+            app:layout_constraintStart_toEndOf="@id/added_thumbnail"
+            app:layout_constraintTop_toBottomOf="@id/added_author" />
+
+
+        <RatingBar
+            android:id="@+id/rating_display"
+            style="@style/CustomRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_marginRight="@dimen/small_dim"
+            android:numStars="5"
+            android:paddingBottom="@dimen/small_dim"
+            android:rating="3"
+            android:stepSize="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/added_author" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

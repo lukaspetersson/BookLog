@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_status_options">
+        <item>@string/to_read_status</item>
+        <item>@string/reading_status</item>
+        <item>@string/finished_status</item>
+    </string-array>
+
+    <string-array name="settings_order_by_labels">
+        <item>@string/settings_order_addition_date_label</item>
+        <item>@string/settings_order_by_rating_label</item>
+        <item>@string/settings_order_by_author_label</item>
+        <item>@string/settings_order_by_title_label</item>
+        <item>@string/settings_order_by_status_label</item>
+    </string-array>
+
+    <string-array name="settings_order_by_values">
+        <item>@string/settings_order_addition_date_value</item>
+        <item>@string/settings_order_by_rating_value</item>
+        <item>@string/settings_order_by_author_value</item>
+        <item>@string/settings_order_by_title_value</item>
+        <item>@string/settings_order_by_status_value</item>
+    </string-array>
+
+    <string-array name="settings_show_status_labels">
+        <item>@string/show_all</item>
+        <item>@string/to_read_status</item>
+        <item>@string/reading_status</item>
+        <item>@string/finished_status</item>
+    </string-array>
+
+    <string-array name="settings_show_status_values">
+        <item>@string/show_all_value</item>
+        <item>@string/to_read_value</item>
+        <item>@string/reading_value</item>
+        <item>@string/finished_value</item>
+    </string-array>
+</resources>
