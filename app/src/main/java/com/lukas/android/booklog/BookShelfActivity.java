@@ -138,6 +138,8 @@ public class BookShelfActivity extends AppCompatActivity implements
         });
         //start loader
         getLoaderManager().initLoader(BOOK_LOADER, null, this);
+
+        //TODO: load from firebase if authenticated
     }
 
     @Override
@@ -216,3 +218,19 @@ public class BookShelfActivity extends AppCompatActivity implements
         return super.onOptionsItemSelected(item);
     }
 }
+
+//TODO: add this at all appropriate places
+    /*@Override
+    protected void onPause(){
+        super.onPause();
+        if (mAuthStateListener != null) {
+            mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
+        }
+        mMessageAdapter.clear();
+        detachDatabaseReadListener();
+    }
+    @Override
+    protected void onResume(){
+        super.onResume();
+        mFirebaseAuth.addAuthStateListener(mAuthStateListener);
+    }*/

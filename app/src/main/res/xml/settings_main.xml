@@ -16,4 +16,11 @@
         android:key="@string/settings_show_status_key"
         android:title="@string/settings_show_status_label" />
 
+    <SwitchPreference
+        android:defaultValue="@bool/settings_auth_user_default"
+        android:entries="@array/settings_auth_user_labels"
+        android:entryValues="@array/settings_auth_user_values"
+        android:key="@string/settings_auth_user_key"
+        android:title="@string/settings_auth_user_label" />
+
 </PreferenceScreen>

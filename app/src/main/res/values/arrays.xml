@@ -35,4 +35,14 @@
         <item>@string/reading_value</item>
         <item>@string/finished_value</item>
     </string-array>
+
+    <string-array name="settings_auth_user_labels">
+        <item>@string/auth_true_label</item>
+        <item>@string/auth_false_label</item>
+    </string-array>
+
+    <string-array name="settings_auth_user_values">
+        <item>@bool/auth_true_value</item>
+        <item>@bool/auth_false_value</item>
+    </string-array>
 </resources>

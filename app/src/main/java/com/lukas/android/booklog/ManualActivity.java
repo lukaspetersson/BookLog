@@ -286,6 +286,12 @@ public class ManualActivity extends AppCompatActivity implements
     }
 
     @Override
+    protected void onStop() {
+        super.onStop();
+        saveBook();
+    }
+
+    @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
         //projection with included columns
         String[] projection = {

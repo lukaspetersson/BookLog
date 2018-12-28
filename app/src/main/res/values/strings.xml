@@ -49,9 +49,24 @@
     <string name="settings_title">Book settings</string>
     <string name="settings_edit">Edit</string>
 
+    <string name="settings_auth_user_label">Store books in the cloud</string>
+    <string name="settings_auth_user_key" translatable="false">auth_user</string>
+    <bool name="settings_auth_user_default" translatable="false">@bool/auth_false_value</bool>
+
+    <bool name="auth_true_value" translatable="false">true</bool>
+    <bool name="auth_false_value" translatable="false">false</bool>
+
+    <string name="auth_true_label">Logged in</string>
+    <string name="auth_false_label">Logged out</string>
+
     <string name="settings_show_status_label">Show status</string>
     <string name="settings_show_status_key" translatable="false">show_status</string>
     <string name="settings_show_status_default" translatable="false">@string/show_all_value</string>
+
+    <string name="to_read_value" translatable="false">0</string>
+    <string name="reading_value" translatable="false">1</string>
+    <string name="finished_value" translatable="false">2</string>
+    <string name="show_all_value" translatable="false">show all</string>
 
     <string name="settings_order_by_label">Order by</string>
     <string name="settings_order_by_key" translatable="false">order_by</string>
@@ -71,11 +86,6 @@
 
     <string name="settings_order_addition_date_label">Addition date</string>
     <string name="settings_order_addition_date_value" translatable="false">_id</string>
-
-    <string name="to_read_value" translatable="false">0</string>
-    <string name="reading_value" translatable="false">1</string>
-    <string name="finished_value" translatable="false">2</string>
-    <string name="show_all_value" translatable="false">show all</string>
 
     <string name="by">" by "</string>
     <string name="next_book">" is the book I will be reading next!"</string>

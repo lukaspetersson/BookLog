@@ -56,4 +56,7 @@
     <string name="have_read">"Jag har läst "</string>
     <string name="giving_rating">"Jag ger den "</string>
     <string name="final_rating">/5 i betyg.</string>
+    <string name="settings_auth_user_label">Lagra böcker i molnet</string>
+    <string name="auth_true_label">Inloggad</string>
+    <string name="auth_false_label">Utloggad</string>
 </resources>

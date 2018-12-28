@@ -7,6 +7,7 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -104,13 +105,13 @@ public class SearchActivity extends AppCompatActivity {
                     NoInternet();
                     emptyView.setVisibility(View.VISIBLE);
                 }
+
                 return false;
             }
 
             //do things when text is changed
             @Override
             public boolean onQueryTextChange(String newText) {
-                //do nothing here
                 return false;
             }
         });
