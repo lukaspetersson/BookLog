@@ -67,18 +67,26 @@ public class SettingsActivity extends AppCompatActivity {
                     FirebaseUser user = firebaseAuth.getCurrentUser();
                     if (user != null) {
                         // User is signed in
-
-                        //TODO: translate
-                        authUser.setSummary("Signed in as "+user.getDisplayName());
-
+                        authUser.setSummary(getString(R.string.auth_true_label)+user.getDisplayName());
                     } else {
                         // User is signed out
-                        authUser.setSummary("Signed out");
-
+                        authUser.setSummary(getString(R.string.auth_false_label));
                     }
                 }
             };
+        }
 
+        @Override
+        public void onPause(){
+        super.onPause();
+            if (mAuthStateListener != null) {
+                mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
+            }
+        }
+        @Override
+        public void onResume(){
+            super.onResume();
+            mFirebaseAuth.addAuthStateListener(mAuthStateListener);
         }
 
         @Override
@@ -115,7 +123,7 @@ public class SettingsActivity extends AppCompatActivity {
 
                     }else{
                         //logging out
-                        AuthUI.getInstance().signOut(SettingsActivity.this);
+                        AuthUI.getInstance().signOut(getActivity());
                     }
                 }
             }

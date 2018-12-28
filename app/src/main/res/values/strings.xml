@@ -56,8 +56,8 @@
     <bool name="auth_true_value" translatable="false">true</bool>
     <bool name="auth_false_value" translatable="false">false</bool>
 
-    <string name="auth_true_label">Logged in</string>
-    <string name="auth_false_label">Logged out</string>
+    <string name="auth_true_label">"Signed in as "</string>
+    <string name="auth_false_label">Signed out</string>
 
     <string name="settings_show_status_label">Show status</string>
     <string name="settings_show_status_key" translatable="false">show_status</string>
