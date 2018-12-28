@@ -20,6 +20,8 @@ import java.util.Arrays;
 //settings let user pich what status is shown and in what order the bookshelf is sorted
 public class SettingsActivity extends AppCompatActivity {
 
+    //TODO: Load sql table and compare it to firebase data
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,10 +30,8 @@ public class SettingsActivity extends AppCompatActivity {
 
     public static class BookPreferenceFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
 
-        private String mUsername;
         private FirebaseAuth mFirebaseAuth;
         private FirebaseAuth.AuthStateListener mAuthStateListener;
-        private int preventLogInTwise;
         public static final int RC_SIGN_IN = 1;
 
 
@@ -40,10 +40,7 @@ public class SettingsActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.settings_main);
 
-            mUsername = "ANONYMOUS";
             mFirebaseAuth = FirebaseAuth.getInstance();
-
-            preventLogInTwise = 0;
 
 
             //bind key to preference
@@ -107,9 +104,6 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             }else if(value instanceof Boolean){
                 //if the prefferance is an boolean, handle authentication
-
-                preventLogInTwise ++;
-                if(preventLogInTwise%2==1){
                     if(value.toString().equals("true")){
                         //logging in
                         startActivityForResult(
@@ -128,7 +122,6 @@ public class SettingsActivity extends AppCompatActivity {
                         AuthUI.getInstance().signOut(getActivity());
                     }
                 }
-            }
 
             return true;
         }
