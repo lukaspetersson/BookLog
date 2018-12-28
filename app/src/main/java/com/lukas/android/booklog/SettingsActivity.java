@@ -68,6 +68,8 @@ public class SettingsActivity extends AppCompatActivity {
                     if (user != null) {
                         // User is signed in
                         authUser.setSummary(getString(R.string.auth_true_label)+user.getDisplayName());
+
+                        //TODO: check if sql or firebase have more items, delete the list with fewest items and then make them the same
                     } else {
                         // User is signed out
                         authUser.setSummary(getString(R.string.auth_false_label));

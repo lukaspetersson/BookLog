@@ -3,6 +3,7 @@
     android:title="@string/settings_title">
 
     <ListPreference
+        android:icon="@drawable/baseline_sort_black_36"
         android:defaultValue="@string/settings_order_by_default"
         android:entries="@array/settings_order_by_labels"
         android:entryValues="@array/settings_order_by_values"
@@ -10,6 +11,7 @@
         android:title="@string/settings_order_by_label" />
 
     <ListPreference
+        android:icon="@drawable/baseline_filter_list_black_36"
         android:defaultValue="@string/settings_show_status_default"
         android:entries="@array/settings_show_status_labels"
         android:entryValues="@array/settings_show_status_values"
@@ -17,6 +19,7 @@
         android:title="@string/settings_show_status_label" />
 
     <SwitchPreference
+        android:icon="@drawable/baseline_cloud_black_36"
         android:defaultValue="@bool/settings_auth_user_default"
         android:entries="@array/settings_auth_user_labels"
         android:entryValues="@array/settings_auth_user_values"

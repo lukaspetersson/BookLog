@@ -13,6 +13,7 @@ import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,6 +21,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.lukas.android.booklog.data.BookContract.BookEntry;
 
 
@@ -45,6 +48,12 @@ public class BookShelfActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_shelf);
+
+        //TODO: add books to cloud when user is logged in and when new book is added.
+        //TODO: read from cloud if user is authenticated else from sql
+        FirebaseAuth mFirebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = mFirebaseAuth.getCurrentUser();
+        Log.v("BookShelfActivity", "HEHHEHEHEHEHHEHEHE"+user);
 
         //find the ListView which will be populated with the bookshelf
         ListView shelfListView = (ListView) findViewById(R.id.shelf_list);
@@ -218,19 +227,3 @@ public class BookShelfActivity extends AppCompatActivity implements
         return super.onOptionsItemSelected(item);
     }
 }
-
-//TODO: add this at all appropriate places
-    /*@Override
-    protected void onPause(){
-        super.onPause();
-        if (mAuthStateListener != null) {
-            mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
-        }
-        mMessageAdapter.clear();
-        detachDatabaseReadListener();
-    }
-    @Override
-    protected void onResume(){
-        super.onResume();
-        mFirebaseAuth.addAuthStateListener(mAuthStateListener);
-    }*/
