@@ -38,11 +38,13 @@ public class BookShelfActivity extends AppCompatActivity implements
     //set up the FABs as global variables
     private FloatingActionButton searchFab;
     private FloatingActionButton manualFab;
+    private FloatingActionButton scanFab;
     private FloatingActionButton mainFab;
 
     //set animation object as global variable
     private ObjectAnimator animationSearch;
-    ObjectAnimator animationManual;
+    private ObjectAnimator animationManual;
+    private ObjectAnimator animationScan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,15 +70,19 @@ public class BookShelfActivity extends AppCompatActivity implements
         mainFab.bringToFront();
         manualFab = findViewById(R.id.manual_fab);
         searchFab = findViewById(R.id.search_fab);
+        scanFab = findViewById(R.id.scan_fab);
 
         //makes distances of animation in density independant pixels to fit all screensizes
         float distance1 = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, -62, getResources().getDisplayMetrics());
         float distance2 = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, -118, getResources().getDisplayMetrics());
+        float distance3 = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, -174, getResources().getDisplayMetrics());
         //gives animationobjects objective
         animationSearch = ObjectAnimator.ofFloat(searchFab, "translationY", distance1);
         animationSearch.setDuration(300);
         animationManual = ObjectAnimator.ofFloat(manualFab, "translationY", distance2);
         animationManual.setDuration(300);
+        animationScan = ObjectAnimator.ofFloat(scanFab, "translationY", distance3);
+        animationScan.setDuration(300);
 
         //makes mainFab clickable
         mainFab.setOnClickListener(new View.OnClickListener() {
@@ -89,12 +95,16 @@ public class BookShelfActivity extends AppCompatActivity implements
                     searchFab.show();
                     animationManual.start();
                     manualFab.show();
+                    animationScan.start();
+                    scanFab.show();
                 } else {
                     //reverse animation if option FABs are visable
                     animationSearch.reverse();
                     searchFab.hide();
                     animationManual.reverse();
                     manualFab.hide();
+                    animationScan.reverse();
+                    scanFab.hide();
                 }
             }
         });
@@ -108,6 +118,7 @@ public class BookShelfActivity extends AppCompatActivity implements
                 //hide option FABs
                 manualFab.hide();
                 searchFab.hide();
+                scanFab.hide();
             }
         });
         //makes manualFab clickable
@@ -120,6 +131,19 @@ public class BookShelfActivity extends AppCompatActivity implements
                 //hide option FABs
                 manualFab.hide();
                 searchFab.hide();
+                scanFab.hide();
+            }
+        });
+        scanFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //intent to open scan activity
+                Intent openScan = new Intent(BookShelfActivity.this, BarcodeScanningActivity.class);
+                startActivity(openScan);
+                //hide option FABs
+                manualFab.hide();
+                searchFab.hide();
+                scanFab.hide();
             }
         });
         //setup an adapter to create a list item for each row of book data in the Cursor, if empty pass in null
@@ -134,6 +158,7 @@ public class BookShelfActivity extends AppCompatActivity implements
                 //hides option FABS
                 searchFab.hide();
                 manualFab.hide();
+                scanFab.hide();
 
                 //intent to open view activity
                 Intent openView = new Intent(BookShelfActivity.this, ViewActivity.class);

@@ -50,6 +50,9 @@ public class ManualActivity extends AppCompatActivity implements
     //unique identifier for the book data loader
     private static final int EXISTING_BOOK_LOADER = 0;
 
+    //prevent saving when exiting activity normaly
+    private boolean normalExit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +81,8 @@ public class ManualActivity extends AppCompatActivity implements
             mAuthorView.setText(intent.getStringExtra("author"));
             mThumbnail = intent.getStringExtra("thumbnail");
 
+            normalExit = false;
+
             //hide delete option
             invalidateOptionsMenu();
         } else {
@@ -99,8 +104,11 @@ public class ManualActivity extends AppCompatActivity implements
 
         //returns early and does not save book if there is not title
         if (mTitle.isEmpty()) {
-            Toast.makeText(this, getString(R.string.no_title_error),
-                    Toast.LENGTH_SHORT).show();
+            //only show toast if it is an normal exit
+            if(normalExit){
+                Toast.makeText(this, getString(R.string.no_title_error),
+                        Toast.LENGTH_SHORT).show();
+            }
             return;
         }
 
@@ -218,6 +226,7 @@ public class ManualActivity extends AppCompatActivity implements
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        normalExit=true;
         //option in appbar is clicked
         switch (item.getItemId()) {
             //save is clicked
@@ -288,7 +297,10 @@ public class ManualActivity extends AppCompatActivity implements
     @Override
     protected void onStop() {
         super.onStop();
-        saveBook();
+        //if it is not an normal exit, save book
+        if(!normalExit){
+            saveBook();
+        }
     }
 
     @Override

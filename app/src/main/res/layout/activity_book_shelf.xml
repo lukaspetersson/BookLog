@@ -86,4 +86,17 @@
         app:backgroundTint="@color/colorPrimaryDark"
         app:fabSize="mini" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/scan_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="18dp"
+        android:src="@drawable/outline_camera_alt_white_24"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:fabSize="mini" />
+
 </RelativeLayout>
