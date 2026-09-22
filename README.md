@@ -11,6 +11,8 @@ BookLog is a focused Android reading journal and book tracker for notes, ratings
 - [Privacy policy](https://lukaspetersson.com/lp-apps/booklog-privacy.html)
 - [Account and data deletion](https://lukaspetersson.com/lp-apps/booklog-delete-account.html)
 
+Para leitores no Brasil: [conheça o BookLog, um diário de leitura para Android](https://lukaspetersson.com/lp-apps/booklog-diario-de-leitura.html) ou [veja o app no Google Play](https://play.google.com/store/apps/details?id=com.lukas.android.booklog&hl=pt_BR&gl=BR). Este repositório contém uma versão antiga do código; a página do app descreve os recursos atuais.
+
 ## About this repository
 
 This public repository contains an earlier BookLog codebase and is retained as historical source. Its local build output is not evidence of the version currently published on Google Play.
